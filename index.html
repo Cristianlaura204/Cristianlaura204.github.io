@@ -56,6 +56,55 @@
             width: 100%;
             bottom: 0;
         }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .tab {
+            padding: 10px 20px;
+            margin: 0 10px;
+            background-color: #f0f8ff;
+            border: 1px solid #4CAF50;
+            cursor: pointer;
+        }
+        .tab:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .content {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .show {
+            display: block;
+        }
+        .social-icons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .social-icons img {
+            width: 40px;
+            margin: 10px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -65,19 +114,98 @@
 
     <div class="profile">
         <img src="tu-foto.jpg" alt="Mi foto">
-        <h1>Cristian Jordan Laura Mamani</h1>
-        <p>Hola, soy Cristian Jordan Laura Mamani, estudiante de tercer semestre en la Universidad Católica San Pablo. Mi interés se encuentra en el fascinante mundo del marketing y las finanzas, campos que considero esenciales para el desarrollo de estrategias exitosas en el ámbito empresarial. Estoy comprometido con mi formación académica y en constante búsqueda de aprender nuevas herramientas y conocimientos que me permitan aportar valor en estos sectores.</p>
+        <h1>Tu Nombre</h1>
+        <p>¡Hola! Soy estudiante de Administración, apasionada/o por aprender nuevas habilidades y crecer profesionalmente. Me encanta explorar el mundo de la tecnología y los negocios.</p>
     </div>
 
     <div class="links">
         <h2>Encuéntrame en:</h2>
-        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
-        <a href="https://github.com" target="_blank">GitHub</a>
-        <a href="https://www.tuportfolio.com" target="_blank">Mi Portafolio</a>
+        <a href="https://www.linkedin.com" target="_blank"><img src="linkedin-logo.png" alt="LinkedIn"></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="instagram-logo.png" alt="Instagram"></a>
+        <a href="mailto:tu-email@ejemplo.com"><img src="email-logo.png" alt="Correo"></a>
+    </div>
+
+    <div class="tabs">
+        <div class="tab" onclick="showTab('cursos')">Mis Cursos</div>
+        <div class="tab" onclick="showTab('compañeros')">Compañeros de Grupo</div>
+    </div>
+
+    <div id="cursos" class="content">
+        <h2>Mis Cursos y Profesores</h2>
+        <table>
+            <tr>
+                <th>Curso</th>
+                <th>Profesor</th>
+            </tr>
+            <tr>
+                <td>Pensamiento Computacional</td>
+                <td>Ernesto Cuadros</td>
+            </tr>
+            <tr>
+                <td>Estadística y Probabilidades</td>
+                <td>Luisa Urure Tejada</td>
+            </tr>
+            <tr>
+                <td>Lógica y Gnoseología</td>
+                <td>Kristel Gisselle Loayza Cruz</td>
+            </tr>
+            <tr>
+                <td>Costos y Planeamiento Presupuestal</td>
+                <td>José Alfredo Díaz Flores</td>
+            </tr>
+            <tr>
+                <td>Matemática Financiera</td>
+                <td>María Belén Bocchio Linares</td>
+            </tr>
+            <tr>
+                <td>Teología</td>
+                <td>Marcio De Souza Paulo</td>
+            </tr>
+            <tr>
+                <td>Cálculo en Varias Variables</td>
+                <td>César Alberto Gallegos Esquivias</td>
+            </tr>
+            <tr>
+                <td>Desarrollo de Habilidades</td>
+                <td>Raúl Urday Dioses / Jhony Velásquez Delgado</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="compañeros" class="content">
+        <h2>Compañeros de Grupo</h2>
+        <ul>
+            <li><a href="https://milagros-estela-chire-sulla.netlify.app/" target="_blank">Milagros Estela Chire Sulla</a></li>
+            <li><a href="https://alexandrovich-gb.github.io/MI_PAGINA_WEB/" target="_blank">Ivan Alexandrovich Gonzales Begazo</a></li>
+            <li><a href="https://sebastianflorespro.github.io/" target="_blank">Sebastian Flores</a></li>
+            <li><a href="https://rodrigoandreccalloapaza.neocities.org/" target="_blank">Rodrigo Andre Ccallo Apaza</a></li>
+            <li><a href="https://paolojoaquingomezmanrique.github.io/ICC/" target="_blank">Paolo Gómez Manrique</a></li>
+            <li><a href="https://macarenadiaz.site" target="_blank">Macarena Díaz Paredes</a></li>
+            <li><a href="https://a13xanderplatz.neocities.org/" target="_blank">Jhon Alexander Flores Condori</a></li>
+            <li><a href="https://claudia-portugal.github.io/Claudia-Portugal/" target="_blank">Claudia Fernanda Portugal Torres</a></li>
+            <li><a href="https://ana-patricia-quiroz.neocities.org/" target="_blank">Ana Patricia Quiroz Cuadros</a></li>
+            <li><a href="https://luis-alberto-saenz.neocities.org/" target="_blank">Luis Alberto Saenz Coila</a></li>
+            <li><a href="https://diomarmp.github.io/DiomarMamaniPacori/#compa%C3%B1eros" target="_blank">Diomar Yeison Mamani Pacori</a></li>
+            <li><a href="https://mv1323.github.io/miguelvilchezgustavson.github.io/" target="_blank">Miguel Alejandro Vílchez Gustavson</a></li>
+            <li><a href="https://tx1419.github.io/ghpagetx/" target="_blank">Jose Maria Fernandez</a></li>
+            <li><a href="https://marimezapino.github.io/MarianaGabrielaMezaPino/" target="_blank">Mariana Gabriela Meza Pino</a></li>
+            <li><a href="https://lscn007.github.io/albertolescano.github.io/" target="_blank">Alberto Fabricio Lescano Taype</a></li>
+            <li><a href="https://alexandrasuan.github.io/" target="_blank">Abigail Alexandra Suaña Cahua</a></li>
+            <li><a href="https://eliashermersonramoshuanca.github.io/ucsp/" target="_blank">Elias Hemerson Ramos Huanca</a></li>
+            <li><a href="https://deysi85.github.io/-Deysi-Maryori-Vargas-Salazar./" target="_blank">Deysi Vargas Salazar</a></li>
+        </ul>
     </div>
 
     <footer>
         <p>Creado por Tu Nombre © 2024</p>
     </footer>
+
+    <script>
+        function showTab(tabName) {
+            const tabs = document.querySelectorAll('.content');
+            tabs.forEach(tab => tab.classList.remove('show'));
+            document.getElementById(tabName).classList.add('show');
+        }
+    </script>
 </body>
 </html>
